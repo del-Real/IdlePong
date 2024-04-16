@@ -115,8 +115,8 @@ int main() {
                 // Update LOGO
                 framesCounter++;
 
-                if (framesCounter > 1) {  // default value: 200
-                    screen = TITLE;       // Change to TITLE screen after 3 seconds
+                if (framesCounter > 700) {  // default value: 200
+                    screen = TITLE;         // Change to TITLE screen after 3 seconds
                     framesCounter = 0;
                 }
 
@@ -180,7 +180,7 @@ int main() {
 
         switch (screen) {
             case LOGO: {
-                if (framesCounter < 100) {
+                if (framesCounter < 350) {
                     DrawTexture(cpLogo, screenWidth / 2 - cpLogo.width / 2, screenHeight / 2 - cpLogo.height / 2, WHITE);
                 } else {
                     DrawText("Made with", screenWidth / 2 - 120, screenHeight / 2 - 200, 50, WHITE);
