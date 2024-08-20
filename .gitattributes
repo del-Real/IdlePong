@@ -1,2 +1,11 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Treat all .c files as C language
+*.c linguist-language=C
+
+# Treat .h files as C (if your C code uses header files)
+*.h linguist-language=C
+
+# Ignore Makefile when determining the language
+Makefile linguist-language=Ignore
